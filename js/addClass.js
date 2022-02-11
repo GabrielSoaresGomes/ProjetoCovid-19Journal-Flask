@@ -4,7 +4,15 @@ $(document).ready(function() {
         $(this).addClass('card-all') //Classe para controle
     })
     $('#allCards li').each(function() {
-        $(this).addClass('justify-content-center d-flex flex-row w-50')
+        $(this).addClass('cardContent justify-content-center d-flex flex-row w-50')
+    })
+    $('li.cardContent').each(function(index) {
+        if (index == 0) {
+            $(this).addClass('tabActive')
+        }
+        else {
+            $(this).addClass('d-none')
+        }
     })
     $('li.d-flex > div').each(function() {
         $(this).addClass('card w-25')
