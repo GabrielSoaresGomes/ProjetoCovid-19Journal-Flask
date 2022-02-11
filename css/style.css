@@ -1,8 +1,18 @@
+nav li {
+    list-style: none;
+}
+
 .content-all {
     text-align: center;
 }
 
-.listaEtados {
+.listaEstados {
     text-align: left;
+    display: flex;
+    justify-content: center;
 }
 
+.listaEstados li {
+    font-size: 1.5em;
+    list-style: none;
+}

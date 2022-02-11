@@ -7,102 +7,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand">Journal</a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="content-all">
-        <h1>HOME</h1>
-        <div class="secao ultimasNoticias">
-            <h2>Ultimas Noticias</h2>
-            <div class="card">
-                <img width="50px" src="img/imagem_teste" alt="Imagem De Teste">
-                <div class="content">
-                    <h4 class="previaNoticia">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                    </h4>
-                </div>
+<header>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand">Journal</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="secao maisCurtidas">
-            <h2>Mais Curtidas</h2>
+    </nav>
+</header>
+<div class="content-all">
+    <h1>HOME</h1>
+    <div class="secao ultimasNoticias">
+        <h2>Ultimas Noticias</h2>
+        <div class="card">
+            <img width="50px" src="img/imagem_teste" alt="Imagem De Teste">
+            <div class="content">
+                <h4 class="previaNoticia">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </h4>
+            </div>
         </div>
-        <div class="secao todosEstadios">
-            <h2>Notícias por Estados</h2>
-            <ul class="listaEstados">
-                <li>Acre</li>
-                <li>Alagoas</li>
-                <li>Amapá</li>
-                <li>Amazonas</li>
-                <li>Bahia</li>
-                <li>Ceará</li>
-                <li>Distrito Federal</li>
-                <li>Espirito Santo</li>
-                <li>Goiás</li>
-                <li>Maranhão</li>
-                <li>Mato Grosso do Sul</li>
-                <li>Mato Grosso</li>
-                <li>Minas Gerais</li>
-                <li>Pará</li>
-                <li>Paraíba</li>
-                <li>Paraná</li>
-                <li>Pernambuco</li>
-                <li>Piauí</li>
-                <li>Rio de Janeiro</li>
-                <li>Rio Grande do Norte</li>
-                <li>Rio Grande do Sul</li>
-                <li>Rondônia</li>
-                <li>Roraima</li>
-                <li>Santa Catarina</li>
-                <li>São Paulo</li>
-                <li>Sergipe</li>
-                <li>Tocantins</li>
-            </ul>
-        </div>
-
     </div>
-    
+    <div class="secao maisCurtidas">
+        <h2>Mais Curtidas</h2>
+    </div>
+    <div class="secao todosEstados">
+        <h2>Notícias por Estados</h2>
+        <ul class="listaEstados d-flex flex-wrap">
+            <div>
+                <h3>Acre</h3>
+                <li class="d-flex flex-row w-75">
+                    <div class="card w-25">
+                        <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+                    <div class="card w-25">
+                        <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+                    <div class="card w-25">
+                        <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+                </li>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            <li>
+                <div class="card w-25">Alagoas
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Amapá
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Amazonas
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Bahia
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Ceará
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Distrito Federal
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Espirito Santo
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Goiás
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Maranhão
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Mato Grosso do Sul
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Mato Grosso
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Minas Gerais
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Pará
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Paraíba
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Paraná
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Pernambuco
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Piauí
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Rio de Janeiro
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Rio Grande do Norte
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Rio Grande do Sul
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Rondônia
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Roraima
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Santa Catarina
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">São Paulo
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Sergipe
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+            <li>
+                <div class="card w-25">Tocantins
+                    <img class="card-img-top img-fluid" src="img/imagem_teste" alt="Imagem da Notícia"></div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+</script>
 </body>
 
 </html>
