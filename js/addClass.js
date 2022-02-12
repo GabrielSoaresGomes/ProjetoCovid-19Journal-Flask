@@ -1,4 +1,11 @@
 //Esse arquivo terá o propósito de adicionar class para os elementos do html de uma forma mais prática;
+var todosEstados = [
+    'acre', 'alagoas', 'amapa', 'amazonas', 'bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão',
+    'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí',
+    'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo',
+    'Sergipe', 'Tocantins'
+]
+var c = 0
 $(document).ready(function() {
     $('#allCards > div').each(function() {
         $(this).addClass('card-all') //Classe para controle
@@ -6,7 +13,13 @@ $(document).ready(function() {
     $('#allCards li').each(function() {
         $(this).addClass('cardContent justify-content-center d-flex flex-row w-50')
     })
-    $('div.card-all h3').each(function() {
+    $('div.card-all').each(function() {
+        $(this).addClass('my-5')
+    })
+    $('div.card-all h3').each(function(index) {
+        if (index == 0) {
+            $(this).addClass('text-secondary')
+        }
         $(this).addClass('text-uppercase')
         $(this).css('display', 'inline')
         $(this).attr('role','button')
@@ -39,4 +52,11 @@ $(document).ready(function() {
     $('#allCards .card').each(function() {
         $(this).addClass('mx-1') //Margin "nivel" 4
     })
+    $('div.listaBandeiras img').each(function() {
+        $(this).css('width', '20px')
+    })
+    // $('div.listaBandeiras a').each(function() {
+    //     $(this).attr('href','#id-'+$(this).attr('id'))
+    // })
+
 })
