@@ -37,7 +37,7 @@ $(document).ready(function() {
         $(this).addClass('card w-25 shadow ')
     })
     $('div.card img').each(function() {
-        $(this).addClass('card-img-top img-fluid')
+        $(this).addClass('h-75 card-img-top img-fluid')
     })
     $('div.card > div').each(function() {
         $(this).addClass('card-body')
