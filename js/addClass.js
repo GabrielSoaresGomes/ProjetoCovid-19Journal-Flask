@@ -34,7 +34,7 @@ $(document).ready(function() {
         }
     })
     $('li.d-flex > div').each(function() {
-        $(this).addClass('card w-25')
+        $(this).addClass('card w-25 shadow ')
     })
     $('div.card img').each(function() {
         $(this).addClass('card-img-top img-fluid')
@@ -54,6 +54,10 @@ $(document).ready(function() {
     })
     $('div.listaBandeiras img').each(function() {
         $(this).css('width', '20px')
+    })
+    $('h3 img').each(function() {
+        $(this).css('width', '30px')
+        $(this).css('margin-right', '5px')
     })
     // $('div.listaBandeiras a').each(function() {
     //     $(this).attr('href','#id-'+$(this).attr('id'))
