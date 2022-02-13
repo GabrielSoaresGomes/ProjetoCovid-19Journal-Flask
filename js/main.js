@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('.listaEstados').load('../templates/cards.html')
 })
 
+
 $("div.listaBandeiras a").click(function() {
     var idClicado = $(this).attr('id')
     $('div.card-all li').each(function() {
