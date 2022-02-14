@@ -9,5 +9,5 @@ $('a.card-link').click(function() {
 
 
 
-    window.location.href = '../templates/detalhes.html'
+    window.location.href = '../../templates/detalhes.html'
 })
