@@ -6,6 +6,7 @@ var todosEstados = [
     'Sergipe', 'Tocantins'
 ]
 var c = 0
+
 $(document).ready(function() {
     $('#allCards > div').each(function() {
         $(this).addClass('card-all') //Classe para controle
