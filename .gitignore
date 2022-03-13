@@ -89,6 +89,10 @@ local_settings.py
 .env/
 .venv
 .venv/
+
+*.venv
+*.venv/
+.venv/*
 db.sqlite3
 
 .idea/
