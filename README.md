@@ -1,1 +1,0 @@
-ProjetoCovid-19Journal-Flask

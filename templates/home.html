@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h1 class="h1 text-center">Home</h1>
+
+    <div class="d-flex justify-content-center m-5">
+        {% include 'carousel.html' %}
+    </div>
+    <div style="overflow-x: scroll;" class="d-flex justify-content-around">
+    {% for noticia in noticias %}
+
+        <div class="card text-center" style="width: 18rem;">
+            <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
+            <div class="card-body">
+            <h5 class="card-title">{{ noticia.get_titulo() }}</h5>
+            <p class="card-text text-start">{{ noticia.get_previa() }}</p>
+            <a href="{{url_for('detalhes', id = noticia.get_id())}} " class="btn btn-primary">Ler mais...</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{noticia.get_dataPostagem()}}
+              </div>
+        </div>
+        
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
