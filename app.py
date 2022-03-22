@@ -66,3 +66,7 @@ def home():
 def detalhes(id):
     return render_template("detalhes.html", noticia=lista_noticias[int(id)])
 
+@app.route("/estado/<int:id>")
+def detalharEstado(id):
+    return render_template("noticia_estado.html")
+
