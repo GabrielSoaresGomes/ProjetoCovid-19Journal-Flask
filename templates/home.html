@@ -10,7 +10,7 @@
     </div>
     <div style="overflow-x: scroll;" class="d-flex justify-content-around">
     {% for noticia in noticias %}
-
+        {% if noticia.get_estado() == None %}
         <div class="card text-center" style="width: 18rem;">
             <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
             <div class="card-body">
@@ -22,14 +22,13 @@
                 {{noticia.get_dataPostagem()}}
               </div>
         </div>
-        
-
+        {% endif %}
     {% endfor %}
     </div>
     <div class="bg-secondary p-5">
         <ul class="d-flex list-unstyled flex-wrap justify-content-center">
             {% for estado in estados %}
-            <li style="width:250px" class="my-1"><a href="{{ url_for() }}" ><img width="50px" src="{{ estado.get_bandeira() }}" /> {{estado.get_sigla()}} - {{ estado.get_estado() }} </a></li>
+                <li style="width:250px" class="my-1"><a class="text-body text-decoration-none " href="{{ url_for('detalharEstado', estado = estado.get_estado())}}" ><img width="50px" src="{{ estado.get_bandeira() }}" /> {{estado.get_sigla()}} - {{ estado.get_estado() }} </a></li>
             {% endfor %}
         </ul>
     </div>
