@@ -65,7 +65,7 @@ lista_estados = [
 
 @app.route("/")
 def home():
-    return render_template("home.html", noticias=lista_noticias, estados=lista_estados)
+    return render_template("home.html", noticias=lista_noticias, estados=lista_estados, home=True)
 
 
 @app.route("/detalhes/<id>")
@@ -84,3 +84,4 @@ def detalharEstado(estado):
 
 
 
+app.run(debug=True)

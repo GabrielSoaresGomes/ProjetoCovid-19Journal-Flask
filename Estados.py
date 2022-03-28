@@ -2,7 +2,7 @@ lista_estados = ("Acre","AC","Alagoas","AL","Amapá","AP","Amazonas","AM","Bahia
 
 
 class Estado:
-    def __init__(self, id, estado, sigla, bandeira=None):
+    def __init__(self, id, estado, sigla, bandeira):
         self.__id = id
         self.__estado = estado
         self.__sigla = sigla
