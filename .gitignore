@@ -86,10 +86,13 @@ __pycache__/
 local_settings.py
 
 .env
-venv/*
+venv
 .venv/
+venv/
+venv/pyvenv.cfg
 
 *venv/
 db.sqlite3
 
 .idea/
+venv/pyvenv.cfg
