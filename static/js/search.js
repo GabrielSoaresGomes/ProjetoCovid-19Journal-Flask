@@ -3,5 +3,8 @@ $(document).ready(function() {
 });
 
 $('#js-example-basic-single').change(function () {
-    window.location.href = "estado/"+$(this).val()
+    if ($(this).val() != "None") {
+        window.location.href = "estado/"+$(this).val()
+    }
 })
+

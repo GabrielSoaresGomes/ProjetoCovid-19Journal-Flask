@@ -18,9 +18,10 @@
         <form>
             Busca:
             <select id="js-example-basic-single" name="state">
-                {% for estado in estados %}
-                      <option value="{{ estado.get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado.get_estado())}}"><img src={{ estado.get_bandeira() }}>{{ estado.get_estado() }}</a></option>
-                {% endfor %}
+              <option selected value="None"><a class="option-estado" href="#/">Selecione um estado</a></option>
+              {% for estado in estados %}
+                <option value="{{ estado.get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado.get_estado())}}"><img src={{ estado.get_bandeira() }}>{{ estado.get_estado() }}</a></option>
+              {% endfor %}
 
             </select>
         </form>
