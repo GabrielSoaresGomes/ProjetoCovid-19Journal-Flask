@@ -104,4 +104,20 @@ lista_noticias = [
              "As hospitalizações por Covid continuam em queda no Estado. Boletim epidemiológico divulgado pela Secretaria de Estado de Saúde (SES) nesta terça-feira (29) mostra 48 pessoas internadas em Mato Grosso do Sul. Neste ano de 2022, o pico de internados foi no dia 10 de fevereiro, com 454 hospitalizados. Desde então, os números vem caindo gradativamente. Mato Grosso do Sul conta atualmente com 2.629 casos ativos, sendo 2.581 em isolamento domiciliar e outros 48 hospitalizados, sendo 21 em leitos clínicos e 27 em leitos de UTI. A taxa global de ocupação de leitos SUS/UTI adulto por macrorregião de internação está em 68% em Campo Grande, 60% em Dourados, 47% em Corumbá e 30% em Três Lagoas. Mato Grosso do Sul registrou 7 óbitos por complicações da Covid, elevando a média móvel que estava em 2,6 para 3,4. Dados do boletim indicam que as mortes ocorreram no período entre 16 de junho de 2021 a 27 de março de 2022, e as vítimas residiam em Campo Grande (3), Dourados (2), Guia Lopes da Laguna (1) e Rochedo (1). ", 
              estado_matoGrossoSul),
 
+    Noticias(15, 
+             "14/03/2022", 
+             "USO DE MÁSCARAS EM LOCAIS ABERTOS PASSA A SER FACULTATIVO EM MINAS GERAIS",
+             "O uso de máscaras de proteção em locais abertos deixa de ser obrigatório em Minas Gerais. A partir do dia 12 de março.",
+             "O uso de máscaras de proteção em locais abertos deixa de ser obrigatório em Minas Gerais. A partir do dia 12 de março, a SES-MG recomenda aos municípios mineiros facultarem seu uso de acordo com os indicadores de imunização de seus territórios. A medida é tomada a partir da melhoria dos indicadores da pandemia em Minas Gerais e ao avanço na vacinação. Assim, o critério para a desobrigação em locais abertos é o município ter atingido pelo menos 80% da população com mais de 5 anos com esquema vacinal completo (duas doses ou dose única) da população, e a aplicação da dose de reforço em mais de 40% das pessoas acima de 18 anos.", 
+             estado_minas),
+        
+    Noticias(16, 
+             "29/03/2022", 
+             "Mais duas mortes por Covid-19 são registradas em Santarém; confira os dados da pandemia",
+             "Boletim com dados atualizados foi divulgado pela Secretaria Municipal de Saúde (Semsa) na noite de segunda (28). De acordo com o informe, mortes aconteceram nos dias 22 e 23 de março.",
+             "Mais duas mortes por Covid-19 foram registradas em Santarém, no oeste do Pará. Os dados foram atualizados na noite de segunda (28) pela Secretaria Municipal de Saúde (Semsa).De acordo com o informe, as mortes registradas aconteceram nos dias 22 e 23 de março. Uma mulher de 64 anos e um homem de 49, infelizmente, perderam a vida na pandemia. Existem 2 óbitos sendo investigados e 18 pacientes estão em isolamento clínico-hospitalar ou domiciliar. Ainda segundo o informe, há 39.137 casos confirmados no município. Existem 37.815 pessoas recuperadas, 1.306 óbitos, 63.580 resultados negativos, 22 análises, 81 monitorados e 128.377 monitorados já recuperados.", 
+             estado_para),
+    
+    
+
 ]
