@@ -1,6 +1,7 @@
 class Noticias:
 
     def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado=None):
+        self.__noticia_lista = None
         self.__id = id
         self.__previa = previa
         self.__dataPostagem = dataPostagem
@@ -25,3 +26,9 @@ class Noticias:
 
     def get_estado(self):
         return self.__estado
+
+    def get_noticia_lista(self):
+        return self.__noticia_lista
+
+    def set_noticia_lista(self, noticia_lista):
+        self.__noticia_lista = noticia_lista
