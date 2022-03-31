@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %} {{ noticia[0].get_titulo() }} {% endblock title %}
+{% block title %} {{ noticia.get_titulo() }} {% endblock title %}
 
 {% block content %}
-
-<h1 class="h1 text-center"> {{noticia[0].get_titulo()}} </h1>
-<h2 class="text-center">Notícia postada na data: {{ noticia[0].get_dataPostagem() }}</h2>
-
-
     <div>
-        <p class="text-start p-2 lh-lg fw-bold"> {{ noticia[0].get_conteudo() }} </p>
+        <h2 class="h2 text-center text-primary"> {{noticia.get_titulo()}} </h2>
+        <div class="w-75 m-auto">
+            <p class="text-dark p-2 lh-lg fw-bold"> {{ noticia.get_conteudo() }} </p>
+        </div>
     </div>
 
 {% endblock content %}

@@ -12,11 +12,11 @@ def home():
     return render_template("home.html", noticias=lista_noticias, estados=lista_estados, home=True)
 
 
-@app.route("/detalhes/<id>")
+@app.route("/detalhes/<int:id>")
 def detalhes(id):
     for noticia in lista_noticias:
         if int(noticia.get_id()) == int(id):
-            return render_template("detalhes.html", noticia=lista_noticias[int(id)])
+            return render_template("detalhes.html", noticia=noticia)
 
 
 @app.route("/estado/<estado>")
@@ -27,4 +27,4 @@ def detalharEstado(estado):
                                    noticias=lista_noticias)
 
 
-app.run(debug=True)
+#app.run(debug=True)
