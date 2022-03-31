@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="bg-secondary py-3 text-center">
-        <img class="text-center" src="../{{ estado[0].get_bandeira() }}" />
-        <h1 class="h1">{{ estado[0].get_estado() }} - {{ estado[0].get_sigla() }}</h1>
+        <img class="text-center" src="../{{ estado.get_bandeira() }}" />
+        <h1 class="h1">{{ estado.get_estado() }} - {{ estado.get_sigla() }}</h1>
     </div>
 
     <div style="overflow-x: scroll;" class="d-flex my-5 justify-content-around">
     {% for noticia in noticias %}
-        {% if noticia.get_estado()[0].get_estado() == estado[0].get_estado() %}
+        {% if noticia.get_estado().get_estado() == estado.get_estado() %}
         <div class="card text-center" style="width: 18rem;">
             <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
             <div class="card-body">

@@ -20,7 +20,7 @@
             <select id="js-example-basic-single" name="state">
               <option selected value="None"><a class="option-estado" href="#/">Selecione um estado</a></option>
               {% for estado in estados %}
-                <option value="{{ estado[0].get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado[0].get_estado())}}"><img src={{ estado[0].get_bandeira() }}>{{ estado[0].get_estado() }}</a></option>
+                <option value="{{ estado.get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado.get_estado())}}"><img src={{ estado.get_bandeira() }}>{{ estado.get_estado() }}</a></option>
               {% endfor %}
 
             </select>
