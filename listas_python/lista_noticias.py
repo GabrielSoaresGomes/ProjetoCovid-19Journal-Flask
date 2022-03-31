@@ -3,30 +3,6 @@ from .lista_estados import *
 
 lista_noticias = [
     #       id  data postagem titulo        previa
-    Noticias(0, "17/02/2004", "Lorem 00",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto.",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto." * 10),
-
-    Noticias(1, "23/03/2005", "Lorem 01",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto.",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto." * 7),
-
-    Noticias(2, "21/05/2006", "Lorem 02",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto.",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto." * 5),
-
-    Noticias(3, "22/05/2006", "Lorem 03",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto.",
-             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum minima id explicabo facere "
-             "atque? Cupiditate nam natus minima iusto." * 17, "Pará"),
-    
     Noticias(4, 
              "14/03/2022", 
              "Mesmo com vazante, três cidades do AC seguem com nível dos rios acima da cota de transbordo",
@@ -117,6 +93,27 @@ lista_noticias = [
              "Boletim com dados atualizados foi divulgado pela Secretaria Municipal de Saúde (Semsa) na noite de segunda (28). De acordo com o informe, mortes aconteceram nos dias 22 e 23 de março.",
              "Mais duas mortes por Covid-19 foram registradas em Santarém, no oeste do Pará. Os dados foram atualizados na noite de segunda (28) pela Secretaria Municipal de Saúde (Semsa).De acordo com o informe, as mortes registradas aconteceram nos dias 22 e 23 de março. Uma mulher de 64 anos e um homem de 49, infelizmente, perderam a vida na pandemia. Existem 2 óbitos sendo investigados e 18 pacientes estão em isolamento clínico-hospitalar ou domiciliar. Ainda segundo o informe, há 39.137 casos confirmados no município. Existem 37.815 pessoas recuperadas, 1.306 óbitos, 63.580 resultados negativos, 22 análises, 81 monitorados e 128.377 monitorados já recuperados.", 
              estado_para),
+
+    Noticias(17,
+             "30/03/2022",
+             "Atualização Covid-19",
+             "Paraíba registra 585 novos casos de covid-19 nesta quarta",
+             "A Secretaria de Estado da Saúde (SES) registrou, nesta quarta (30), 585 casos de Covid-19. Entre os casos confirmados neste boletim, 02 (0,34%) são moderados ou graves e 583 (99,66%) são leves. Agora, a Paraíba totaliza 595.932 casos confirmados da doença, que estão distribuídos por todos os 223 municípios. Até o momento, já foram realizados 1.493.728 testes para diagnóstico da Covid-19.",
+             estado_paraiba),
+
+    Noticias(18,
+             "30/03/2022",
+             "Coronavírus no Paraná: Acompanhe as notícias do estado em relação à pandemia",
+             "O estado do Paraná divulgou nesta quarta-feira (30), 2.203 novos casos de Covid-19 e 18 mortes provocadas pelo coronavírus. 2.173.502 pacientes se recuperaram.",
+             "De acordo com a Secretaria Estadual de Saúde, 9.788.661 milhões de paranaenses receberam, ao menos, uma dose da vacina; 9.064.090 milhões receberam duas doses ou imunizante de dose única. O estado do Paraná divulgou, nesta terça-feira (29), 2.303 novos casos de Covid-19 e 16 mortes provocadas pelo coronavírus. 2.159.992 pacientes se recuperaram.",
+             estado_parana),
+
+    Noticias(19,
+             "30/03/2022",
+             "Coronavírus no Paraná: Acompanhe as notícias do estado em relação à pandemia",
+             "Vacinação itinerante acontece em seis locais da capital. Há locais fixos para a testagem gratuita da população na cidade, a maioria deles com necessidade de marcação prévia.",
+             "A vacinação itinerante contra a Covid-19 para pessoas a partir de 12 anos acontece em seis locais do Recife nesta quarta-feira (30). Também há imunização mediante agendamento para todos a partir de 5 anos, incluindo a aplicação da 4ª dose para pessoas a partir de 65 anos. Além disso, há locais para a testagem gratuita na capital, a maioria através de marcação prévia (confira locais mais abaixo). Nesta última semana de março, a programação da vacinação itinerante na capital pernambucana segue até sexta-feira (1º). O atendimento acontece sem necessidade de marcação e, para receber a dose, os moradores precisam ter um documento de identificação com foto e um comprovante de residência.",
+             estado_pernambuco),
     
     
 

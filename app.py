@@ -7,8 +7,6 @@ from listas_python.lista_estados import lista_estados
 app = Flask(__name__)
 
 
-
-
 @app.route("/")
 def home():
     return render_template("home.html", noticias=lista_noticias, estados=lista_estados, home=True)
@@ -24,10 +22,9 @@ def detalhes(id):
 @app.route("/estado/<estado>")
 def detalharEstado(estado):
     for est in lista_estados:
-        if est.get_estado() == estado:
-            return render_template("noticia_estado.html", estado=lista_estados[int(est.get_id())],
+        if est[0].get_estado() == estado:
+            return render_template("noticia_estado.html", estado=lista_estados[int(est[0].get_id())],
                                    noticias=lista_noticias)
-
 
 
 app.run(debug=True)
