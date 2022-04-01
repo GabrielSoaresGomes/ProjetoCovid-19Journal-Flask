@@ -143,8 +143,41 @@ lista_noticias = [
              "Março encerra, nesta quinta-feira (31), com mais 13 mortes por Covid-19 no Rio Grande do Sul. Com elas, foram 777 óbitos no mês, uma queda de 44,4% em relação a fevereiro, o mais letal nos últimos oito meses. A redução confirma a tendência de atenuamento na pandemia. Agora, o estado retorna a patamares semelhantes a agosto do ano passado, ainda que superior aos cinco meses posteriores.Em toda a pandemia, o Rio Grande do Sul tem 39.049 vítimas. As mais recentes foram identificadas pela Secretaria Estadual da Saúde (SES) entre 5 e 30 de março, exceto uma de fevereiro e outras três de janeiro.",
              estado_rioGrandeSul),
 
-"
+    Noticias(24,
+            "31/03/2022",
+            "ALE-RO derruba veto do governo e médicos da Bolívia poderão atuar em cidades Rondônia sem o Revalida",
+            "Na justificativa, o autor do projeto defende que a fronteira rondoniense está 'desassistida de serviços básicos de saúde'. O Projeto de Lei foi vetado pelo governo por possuir inconstitucionalidade formal.",
+            "Os deputados estaduais derrubaram com unanimidade, na quarta-feira (30), o veto do Governo de Rondônia no Projeto de Lei que autoriza o poder público a contratar médicos estrangeiros, sem o Revalida, para atuar nas cidades do estado que fazem fronteira com a Bolívia. Na justificativa, o autor do projeto, deputado Lebrão, defende que a fronteira rondoniense está 'desassistida de serviços básicos de saúde' e os brasileiros que vivem lá não podem exercer suas funções. O Projeto de Lei foi vetado pelo governo por possuir inconstitucionalidade formal.",
+            estado_rondonia),
+    Noticias(25,
+            "31/03/2022",
+            "SC anuncia fim do estado de calamidade pública por causa da Covid; saiba o que muda",
+            "Decreto acaba nesta quinta-feira (31) e não será renovado. Com a decisão, o Centro de Operações em Emergências em Saúde (COES) deixa de existir.",
+            "O governador de Santa Catarina, Carlos Moisés (Republicanos), confirmou nesta quinta-feira (31) que não irá prorrogar o estado de calamidade pública por conta da pandemia de Covid-19 no estado. O decreto tem validade até as 23h59 de hoje. Com a nova decisão, o Centro de Operações em Emergências em Saúde (COES) deixa de existir. Criado no início da pandemia, o órgão foi responsável para dar suporte nas decisões tomadas pelos prefeitos e secretários no enfrentamento contra o avanço da doença. A Secretaria de Estado da Saúde informou, porém, que o mapa de risco da Covid divulgado semanalmente e os boletins diários, com os números de casos, mortes e ocupação de leitos de Unidade de Terapia Intensiva (UTI), vão continuar.",
+            estado_santaCatarina),
     
+    Noticias(26,
+            "30/03/2022",
+            "Número de internações por COVID-19 caiu 84% desde janeiro em SP",
+            "Estado está há oito semanas seguidas com queda nas novas internações",
+            "O Governador João Doria anunciou nesta quarta-feira (30) que o Estado de São Paulo registrou redução de 84% das internações por COVID-19 desde o final de janeiro, quando foi registrado o pico da variante Ômicron. Atualmente os hospitais possuem 1.869 pacientes internados, sendo 1.195 em enfermaria e 672 em UTI (Unidade de Terapia Intensiva). 'É uma notícia para ser celebrada. As internações vêm caindo há oito semanas e hoje, pelo quinto dia seguido, São Paulo tem menos de 2 mil pessoas internadas em UTI e em enfermaria'.",
+            estado_saoPaulo),
     
+    Noticias(27,
+            '01/04/2022',
+            "Sergipe inicia campanha de vacinação contra a Influenza na próxima segunda, 04 de abril"
+            "Sergipe inicia a 24ª campanha nacional de vacinação contra a gripe Influenza a partir da próxima segunda, dia 04 de abril.",
+            "Sergipe inicia a 24ª campanha nacional de vacinação contra a gripe Influenza a partir da próxima segunda, dia 04 de abril. O calendário de aplicação dos imunizantes foi definido pela Secretaria de Estado da Saúde (SES) em duas etapas que foram delimitadas pelo Ministério da Saúde e contemplam diversos grupos prioritários. A vacina que será aplicada é trivalente, ou seja, protege contra os vírus H1N1, H3N2 e a influenza A.'Daremos início à campanha vacinando dois grupos prioritários: trabalhadores da Saúde, que também terão a vacina do sarampo atualizada e idosos com faixa etária de 60 anos e mais. Além disso, a SES vai promover em 30 de abril, o dia ‘D’ de imunização para reforçar a vacinação desses dois grupos prioritários' ”, explica a Gerente Estadual do Programa de Imunização, Sândala Oliveira.",
+            estado_sergipe),
 
+    Noticias(28,
+            'Acompanhe o 702º boletim epidemiológico da Covid-19 no Tocantins 01/04',
+            "Hoje o Tocantins contabilizou 184 novos casos confirmados da Covid-19, sendo 22 nas últimas 24h.",
+            "Hoje o Tocantins contabilizou 184 novos casos confirmados da Covid-19, sendo 22 nas últimas 24h. O restante são de exames coletados em dias anteriores e que tiveram seus resultados inseridos no sistema, pelos municípios, na data de ontem. Dos 184 novos casos, 128 foram detectados por RT-PCR, 2 por sorologia e 54 por testes rápidos. Atualmente, o Tocantins contabiliza 922.090 pessoas notificadas com a Covid-19 e acumula 303.003 casos confirmados. Destes 296.799 estão recuperados, 2.059 pacientes seguem em isolamento domiciliar ou hospitalar 4.145 foram a óbito. Os dados contidos no boletim são consolidados com resultados de exames realizados no Lacen e notificações recebidas dos municípios até as 23h59 do último dia.",
+            estado_tocantins),
+    Noticias(29,
+            "Covid-19: Distrito Federal começa a aplicar quarta dose em idosos",
+            "Receberá a vacina, a partir de hoje, quem tem mais de 80 anos",
+            "O governo do Distrito Federal (GDF) começa hoje (1º) a aplicar a quarta dose da vacina contra a covid-19 em idosos com mais de 80 anos. De acordo com estimativa da Companhia de Planejamento do Distrito Federal (Codeplan), residem no DF cerca de 40 mil idosos com mais de 80 anos. O GDF recebeu 47.970 doses da Pfizer para imunizar essa população. A Secretaria de Saúde informou que já foram aplicadas 6 milhões de doses de vacina contra a covid-19. Isso equivale a 89,73% da população com a primeira dose; 82,23% com a segunda; 38,70% com a dose de reforço. A Secretaria de Saúde informou que já foram aplicadas 6 milhões de doses de vacina contra a covid-19. Isso equivale a 89,73% da população com a primeira dose; 82,23% com a segunda; 38,70% com a dose de reforço.",
+            estado_distritoFederal),
 ]

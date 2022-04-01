@@ -29,6 +29,7 @@ estado_tocantins = Estado(25, "Tocantins", "TO", "static/img/bandeiras/tocantins
 estado_distritoFederal = Estado(26, "Distrito Federal", "DF", "static/img/bandeiras/distritofederal.png")
 
 
+
 lista_estados = [
     estado_acre,
     estado_alagoas,
