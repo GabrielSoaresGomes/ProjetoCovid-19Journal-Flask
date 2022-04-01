@@ -114,6 +114,36 @@ lista_noticias = [
              "Vacinação itinerante acontece em seis locais da capital. Há locais fixos para a testagem gratuita da população na cidade, a maioria deles com necessidade de marcação prévia.",
              "A vacinação itinerante contra a Covid-19 para pessoas a partir de 12 anos acontece em seis locais do Recife nesta quarta-feira (30). Também há imunização mediante agendamento para todos a partir de 5 anos, incluindo a aplicação da 4ª dose para pessoas a partir de 65 anos. Além disso, há locais para a testagem gratuita na capital, a maioria através de marcação prévia (confira locais mais abaixo). Nesta última semana de março, a programação da vacinação itinerante na capital pernambucana segue até sexta-feira (1º). O atendimento acontece sem necessidade de marcação e, para receber a dose, os moradores precisam ter um documento de identificação com foto e um comprovante de residência.",
              estado_pernambuco),
+
+    Noticias(20,
+             "31/03/2022",
+             "Piauí volta a não registrar mortes por Covid nas últimas 24 horas; terceira vez esta semana",
+             "O estado registrou 31 casos confirmados, segundo o boletim da Secretaria de Estado da Saúde, nesta quinta-feira (31).",
+             "O Piauí registrou 31 casos confirmados e nenhum óbito por Covid-19, nas últimas 24 horas, segundo dados divulgados pela Secretaria de Estado da Saúde, nesta quinta-feira (31). Dos 31 casos confirmados 21 são de mulheres e 10 de homens, com idades que variam de 02 a 78 anos. Os casos confirmados no estado somam 367.701 em todos os municípios piauienses. Já os óbitos pelo novo coronavírus chegam 7.728 casos e foram registrados em 224 municípios. Dos leitos existentes na rede de saúde do Piauí para atendimento à Covid-19, 102 estão ocupados, sendo 66 leitos clínicos, 29 UTI’s e 07 leitos de estabilização. As altas acumuladas somam 25.995 até o dia 31 de março de 2022.",
+             estado_piaui),
+
+    Noticias(21,
+             "01/04/2022",
+             "Vacinação contra a gripe no Rio começa na segunda-feira",
+             "Imunização será em etapa e, segundo a Secretaria Municipal de Saúde, só crianças com comorbidades precisam fazer um intervalo entre dose da vacina contra a Covid e a da gripe.",
+             "Começa na próxima segunda-feira (4) a vacinação contra a gripe no Rio. O processo de imunização será em etapas, iniciando pelos grupos prioritários.A Secretaria Municipal de Saúde informou que só crianças de 5 a 11 anos precisam esperar um intervalo de tempo para serem vacinadas com nova dose da vacina contra a Covid e a contra a gripe. O intervalo indicado é de 15 dias entre a aplicação dos imunizantes. A orientação da secretaria é que quem estiver com sintomas sugestivos de Covid deve adiar a vacinação contra a gripe até ficar totalmente recuperado. Além disso, precisa esperar pelo menos quatro semanas após o início dos sintomas.",
+             estado_rioDeJaneiro),
+
+    Noticias(22,
+             "01/04/2022",
+             "Governo do RN prorroga obrigatoriedade do uso de máscaras em locais fechados até 7 de abril",
+             "Decreto foi publicado no Diário Oficial do Estado desta sexta-feira (1º).",
+             "O governo do Rio Grande do Norte prorrogou a obrigatoriedade do uso de máscaras em locais fechados até 7 de abril, segundo o boletim da Secretaria de Saúde, nesta quarta-feira.",
+             estado_rioGrandeNorte),
+
+    Noticias(23,
+             "01/04/2022",
+             "Março encerra com 777 mortes por Covid no RS, queda de 44% em relação ao mês anterior",
+             "Secretaria Estadual da Saúde confirmou mais 13 óbitos nesta quinta (31). Internados em leitos de UTI com confirmação ou suspeita para coronavírus baixa para 11%.",
+             "Março encerra, nesta quinta-feira (31), com mais 13 mortes por Covid-19 no Rio Grande do Sul. Com elas, foram 777 óbitos no mês, uma queda de 44,4% em relação a fevereiro, o mais letal nos últimos oito meses. A redução confirma a tendência de atenuamento na pandemia. Agora, o estado retorna a patamares semelhantes a agosto do ano passado, ainda que superior aos cinco meses posteriores.Em toda a pandemia, o Rio Grande do Sul tem 39.049 vítimas. As mais recentes foram identificadas pela Secretaria Estadual da Saúde (SES) entre 5 e 30 de março, exceto uma de fevereiro e outras três de janeiro.",
+             estado_rioGrandeSul),
+
+"
     
     
 
