@@ -1,6 +1,6 @@
 class Noticias:
 
-    def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado=None):
+    def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado):
         self.__noticia_lista = None
         self.__id = id
         self.__previa = previa

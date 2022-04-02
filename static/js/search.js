@@ -4,7 +4,13 @@ $(document).ready(function() {
 
 $('#js-example-basic-single').change(function () {
     if ($(this).val() != "None") {
-        window.location.href = "estado/"+$(this).val()
+        if ((window.location.pathname).split('/')[1] == "estado") {
+            window.location.href = $(this).val();
+        }
+        else{
+            window.location.href = "estado/" + $(this).val();
+        }
     }
 })
+
 
