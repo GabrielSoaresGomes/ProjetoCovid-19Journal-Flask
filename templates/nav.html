@@ -14,17 +14,17 @@
           </li>
         </ul>
       </div>
-      {% if home %}
+      {% if not error and not detalhes %}
         <form>
             Busca:
             <select id="js-example-basic-single" name="state">
               <option selected value="None"><a class="option-estado" href="#/">Selecione um estado</a></option>
-              {% for estado in estados %}
-                <option value="{{ estado.get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado.get_estado())}}"><img src={{ estado.get_bandeira() }}>{{ estado.get_estado() }}</a></option>
+              {% for estado in estadosNav %}
+                <option href="" value="{{ estado.get_estado() }}"><a class="option-estado" href="{{ url_for('detalharEstado', estado = estado.get_estado())}}">{{ estado.get_estado() }}</a></option>
               {% endfor %}
 
             </select>
         </form>
-      {% endif %}
+        {% endif %}
     </div>
   </nav>
