@@ -4,12 +4,6 @@ from listas_python.lista_estados import lista_estados
 from listas_python.lista_home import maisCurtidas, maisVistas, maisRecentes
 app = Flask(__name__)
 
-
-print("-------------------------------------------------------------------------------")
-for noticia in maisRecentes():
-    print(noticia.get_dataPostagem())
-print("-------------------------------------------------------------------------------")
-
 @app.errorhandler(404) 
 def error(e): 
   return render_template("error.html", error=True)

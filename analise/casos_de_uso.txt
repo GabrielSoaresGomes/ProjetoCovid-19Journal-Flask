@@ -1,0 +1,58 @@
+UC01 - Ver notícias por categorias
+    Descrição: Exibir noticias de acordo com as categorias
+    Justificativa: Usuário deseja ver as noticias separadas por categorias
+    Pré-condição: -
+    Pós-condição: Listagem com as noticias da categoria desejada
+    Fluxo Normal:
+        1- Usuário vai até a seção de últimas noticias;
+        2- Sistema apresenta na tela as últimas noticias postadas;
+    Fluxo Alternativo:
+        1.a- Usuário vai até a seção de noticias mais curtidas;
+            1- Sistema apresenta na tela as noticias mais curtidas;
+
+        1.b- Usuário vai até a seção de noticias mais visualizadas;
+            1- Sistema apresenta na tela as noticias mais visualizadas;
+
+    Fluxo de Exceção:
+        -
+
+UC02- Ver noticias por estados
+    Descrição: Exibir noticias separadas por estados;
+    Justificativa: Usuário deseja ver as noticias de um determinado estado;
+    Pré-condição: -
+    Pós-condição: Listagem com as noticias do estado selecionado
+    Fluxo Normal:
+        1- Usuário solicita buscar por um estado específico;
+        2- Sistema exibe campo de busca para o usuário inserir;
+        3- Usuário insere o nome do estado desejado;
+        4- Sistema apresenta os estados que sejam igual ou possuam o nome inserido;
+        5- Usuário solicita ver as noticias desse estado;
+        6- Sistema exibe na tela uma listagem com as notícias do estado solicitado;
+    
+    Fluxo Alternativo:
+        1.a- Usuário vai até a seção com as bandeiras do estado e seleciona o desejado;
+            1- Sistema vai para o passo 6 do Fluxo Normal
+
+    Fluxo de Exceção:
+        3.a - Usuário insere um nome que não filtrou nenhum estado;
+            1- Sistema retorna uma mensagem informando que não foi possivel encontrar um estado;
+
+UC03 - Ver detalhes das noticias
+    Descrição: Exibir as noticias de forma mais detalhada
+    Justificativa: Usuário deseja ter mais informações de uma noticia
+    Pré-condição: -
+    Pós-condição: Uma página com mais informações de uma determinada noticia
+    Fluxo Normal:
+        1- Usuário deseja ver mais informações de uma noticia;
+        2- Sistema inicia o "Caso de Uso 01";
+        3- Usuário escolhe uma noticia desejada e clica em "Ler mais...";
+        4- Sistema mostra na tela mais informações sobre a noticia desejada;
+
+    Fluxo Alternativo:
+        1.a- Usuário deseja ver detalhes da noticia de um determinado estado;
+            1- Sistema inicia o "Caso de Uso 02" e avança para o passo 3 do Fluxo Normal;
+
+    Fluxo de Exceção:
+        - 
+
+
