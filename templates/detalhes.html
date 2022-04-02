@@ -3,11 +3,20 @@
 {% block title %} {{ noticia.get_titulo() }} {% endblock title %}
 
 {% block content %}
+<div class="container my-3 w-75 mx-auto">
+    <div class="img-container text-center">
+        <img src="{{ noticia.get_imagem() }}" class="my-5" width="720px" height="480px">
+    </div>
+    <div class="info-contaier">
+        <p class="ps-5 text-start">{{ noticia.get_dataPostagem() }} -- {{ noticia.views }}👁</p>
+
+    </div>
     <div>
         <h2 class="h2 text-center text-primary"> {{noticia.get_titulo()}} </h2>
         <div class="w-75 m-auto">
             <p class="text-dark p-2 lh-lg fw-bold"> {{ noticia.get_conteudo() }} </p>
         </div>
     </div>
+</div>
 
 {% endblock content %}
