@@ -2,13 +2,14 @@ from random import randint
 
 class Noticias:
 
-    def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado):
+    def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado, imagem="https://via.placeholder.com/286x286"):
         self.__noticia_lista = None
         self.__id = id
         self.__previa = previa
         self.__dataPostagem = dataPostagem
         self.__titulo = titulo
         self.__conteudo = conteudo
+        self.__imagem = imagem
         self.__estado = estado
         self.__likes = randint(0,10000)
         self.__views = randint(0,1000000)
@@ -30,6 +31,9 @@ class Noticias:
 
     def get_estado(self):
         return self.__estado
+
+    def get_imagem(self):
+        return self.__imagem
 
     def get_noticia_lista(self):
         return self.__noticia_lista

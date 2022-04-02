@@ -13,7 +13,7 @@
     <div style="overflow-x: scroll;" class="d-flex justify-content-around">
         {% for noticia in mais_recentes %}
             <div class="card text-center" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
+                <img src={{ noticia.get_imagem() }} height="286" width="320" class="card-img-top" alt="Imagem default">
                 <div class="card-body">
                 <h5 class="card-title">{{ noticia.get_titulo() }}</h5>
                 <p class="card-text text-start">{{ noticia.get_previa() }}</p>
@@ -30,7 +30,7 @@
     <div style="overflow-x: scroll;" class="d-flex justify-content-around">
         {% for noticia in mais_vistas %}
             <div class="card text-center" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
+                <img src={{ noticia.get_imagem() }} height="280" width="340" class="card-img-top" alt="Imagem default">
                 <div class="card-body">
                 <h5 class="card-title">{{ noticia.get_titulo() }}</h5>
                 <p class="card-text text-start">{{ noticia.get_previa() }}</p>
@@ -47,7 +47,7 @@
     <div style="overflow-x: scroll;" class="d-flex justify-content-around">
         {% for noticia in mais_curtidas %}
             <div class="card text-center" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x286" class="card-img-top" alt="Imagem default">
+                <img src={{ noticia.get_imagem() }} height="280" width="340" class="card-img-top" alt="Imagem default">
                 <div class="card-body">
                 <h5 class="card-title">{{ noticia.get_titulo() }}</h5>
                 <p class="card-text text-start">{{ noticia.get_previa() }}</p>
