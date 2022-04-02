@@ -1,3 +1,5 @@
+from random import randint
+
 class Noticias:
 
     def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado):
@@ -8,6 +10,8 @@ class Noticias:
         self.__titulo = titulo
         self.__conteudo = conteudo
         self.__estado = estado
+        self.__likes = randint(0,10000)
+        self.__views = randint(0,1000000)
 
     def get_id(self):
         return self.__id
@@ -29,6 +33,18 @@ class Noticias:
 
     def get_noticia_lista(self):
         return self.__noticia_lista
+
+    @property
+    def likes(self):
+        return self.__likes
+    
+    @property
+    def views(self):
+        return self.__views
+
+    @views.setter
+    def views(self, views):
+        self.__views = views
 
     def set_noticia_lista(self, noticia_lista):
         self.__noticia_lista = noticia_lista

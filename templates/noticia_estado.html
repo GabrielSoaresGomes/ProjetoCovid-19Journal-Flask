@@ -16,7 +16,7 @@
             <a href="{{url_for('detalhes', id = noticia.get_id())}} " class="btn btn-primary">Ler mais...</a>
             </div>
             <div class="card-footer text-muted">
-                {{noticia.get_dataPostagem()}}
+                {{noticia.get_dataPostagem()}} - {{noticia.likes}}👍 - {{noticia.views}}👁
               </div>
         </div>
         {% endif %}
