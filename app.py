@@ -1,48 +1,14 @@
 from flask import Flask, render_template
 from listas_python.lista_noticias import lista_noticias
 from listas_python.lista_estados import lista_estados
-
+from listas_python.lista_home import maisCurtidas, maisVistas, maisRecentes
 app = Flask(__name__)
 
 
-
-mais_curtidas = []
-for noticia in lista_noticias:
-    if len(mais_curtidas) <= 4:
-        mais_curtidas.append(noticia)
-    elif noticia.likes > mais_curtidas[0].likes:
-        mais_curtidas.insert(0, noticia)
-    elif noticia.likes > mais_curtidas[1].likes:
-        mais_curtidas.insert(1, noticia)
-    elif noticia.likes > mais_curtidas[2].likes:
-        mais_curtidas.insert(2, noticia)
-    elif noticia.likes > mais_curtidas[3].likes:
-        mais_curtidas.insert(3, noticia)
-    elif noticia.likes > mais_curtidas[4].likes:
-        mais_curtidas.insert(4, noticia)
-nova_mais_curtidas = []
-for c in range(0,4):
-    nova_mais_curtidas.append(mais_curtidas[c])
-
-
-mais_vistas = []
-for noticia in lista_noticias:
-    if len(mais_vistas) <= 4:
-        mais_vistas.append(noticia)
-    elif noticia.views > mais_vistas[0].views:
-        mais_vistas.insert(0, noticia)
-    elif noticia.views > mais_vistas[1].views:
-        mais_vistas.insert(1, noticia)
-    elif noticia.views > mais_vistas[2].views:
-        mais_vistas.insert(2, noticia)
-    elif noticia.views > mais_vistas[3].views:
-        mais_vistas.insert(3, noticia)
-    elif noticia.views > mais_vistas[4].views:
-        mais_vistas.insert(4, noticia)
-nova_mais_vistas = []
-for c in range(0,4):
-    nova_mais_vistas.append(mais_vistas[c])
-    
+print("-------------------------------------------------------------------------------")
+for noticia in maisRecentes():
+    print(noticia.get_dataPostagem())
+print("-------------------------------------------------------------------------------")
 
 @app.errorhandler(404) 
 def error(e): 
@@ -51,7 +17,8 @@ def error(e):
 
 @app.route("/")
 def home():
-    return render_template("home.html", noticias=lista_noticias, estadosNav=lista_estados,mais_vistas = nova_mais_vistas, mais_curtidas = nova_mais_curtidas)
+    return render_template("home.html", noticias=lista_noticias, estadosNav=lista_estados,mais_vistas = maisVistas(), mais_curtidas = maisCurtidas(), 
+        mais_recentes = maisRecentes())
 
 
 @app.route("/detalhes/<int:id>")
