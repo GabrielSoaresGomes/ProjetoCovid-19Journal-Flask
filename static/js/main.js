@@ -13,4 +13,20 @@ $('#js-example-basic-single').change(function () {
     }
 })
 
+$('#subir-pagina').click(function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 100);
+    return false;
+})
 
+$('#subir-pagina').hover(function () {
+    $(this).animate({
+        fontSize: '+=3'
+    }, 100);
+
+}, function () {
+    $(this).animate({
+        fontSize: '-=3'
+    }, 100);
+})
