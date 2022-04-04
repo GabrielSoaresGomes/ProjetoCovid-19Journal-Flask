@@ -17,7 +17,7 @@ lista_noticias = [
              "Estado tem 1.327 casos suspeitos do coronavírus. Total de óbitos chegou a 6.873.",
              "Alagoas registrou 47 novos casos e mais quatro mortes por Covid nesta segunda-feira (28), de acordo com a Secretaria de Estado da Saúde (Sesau). No último domingo (27), foi a primeira vez desde o início da pandemia, em março de 2020, que o estado não registrou casos e óbitos por Covid.O total acumulado desde o início da pandemia é 296.019 casos conhecidos e 6.873 mortes. Do total de pessoas diagnosticadas com infecção pelo coronavírus, 288.709 estão recuperadas.O estado também acumula 1.327 casos suspeitos, à espera de resultado de exame.Dos 284 leitos exclusivos para Covid e influenza, 29 estavam ocupados até as 16h, o que corresponde a ocupação de 10%.Considerando apenas os leitos de UTI, a taxa de ocupação no estado é de 12%. Maceió registra 19% das UTIs ocupadas. No interior, o percentual é de 4%.", 
              estado_alagoas,
-             "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.saude.al.gov.br%2Falagoas-registra-mais-tres-casos-da-variante-delta-da-covid-19%2F&psig=AOvVaw0LtduJE96S0fGiiGHGT4IP&ust=1649009236866000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjb4qL89fYCFQAAAAAdAAAAABAD"),
+             "https://www.saude.al.gov.br/wp-content/uploads/2022/04/Para-se-candidatar-a-doacao-de-sangue-e-necessario-estar-usando-mascara_FOTO_Carla-Cleto-1-300x200.jpg"),
 
     Noticias(2, 
              "23/06/2021", 

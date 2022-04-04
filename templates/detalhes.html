@@ -3,9 +3,10 @@
 {% block title %} {{ noticia.get_titulo() }} {% endblock title %}
 
 {% block content %}
+
 <div class="container my-3 w-75 mx-auto">
     <div class="img-container text-center">
-        <img src="{{ noticia.get_imagem() }}" class="my-5" width="720px" height="480px">
+        <img src={{ noticia.get_imagem() }} class="my-5" width="720px" height="480px">
     </div>
     <div class="info-contaier">
         <p class="ps-5 text-start">{{ noticia.get_dataPostagem() }} -- {{ noticia.views }}<i class="bi bi-eye"></i></p>

@@ -63,7 +63,7 @@
     <div class="bg-secondary p-5">
         <ul class="d-flex list-unstyled flex-wrap justify-content-center">
             {% for estado in estados %}
-                <li style="width:250px" class="my-1"><a class="text-body text-decoration-none " href="{{ url_for('detalharEstado', estado = estado.get_estado())}}" ><img width="50px" src="{{ estado.get_bandeira() }}" /> {{estado.get_sigla()}} - {{ estado.get_estado() }} </a></li>
+                <li style="width:250px" class="my-4"><a class="text-body text-decoration-none " href="{{ url_for('detalharEstado', estado = estado.get_estado())}}" ><img class="pe-3" width="50px" src="{{ estado.get_bandeira() }}" /> {{estado.get_sigla()}} - {{ estado.get_estado() }} </a></li>
             {% endfor %}
         </ul>
     </div>

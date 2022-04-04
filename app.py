@@ -27,7 +27,7 @@ def detalhes(id):
 def detalharEstado(estado):
     for est in lista_estados:
         if est.get_estado() == estado:
-            return render_template("noticia_estado.html", estado=lista_estados[int(est.get_id())],
+            return render_template("noticia_estado.html", estado=est,
                                    noticias=lista_noticias, estadosNav=lista_estados)
 
     
