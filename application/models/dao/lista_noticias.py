@@ -1,4 +1,4 @@
-from Noticias import Noticias
+from Noticia import Noticias
 from .lista_estados import *
 
 lista_noticias = [

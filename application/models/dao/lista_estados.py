@@ -1,4 +1,4 @@
-from Estados import Estado
+from Estado import Estado
 
 estado_acre = Estado(0, "Acre", "AC", "static/img/bandeiras/acre.png")
 estado_alagoas = Estado(1, "Alagoas", "AL", "static/img/bandeiras/alagoas.png")
