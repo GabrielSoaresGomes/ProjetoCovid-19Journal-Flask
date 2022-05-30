@@ -1,6 +1,6 @@
 from random import randint
 
-class Noticias:
+class Noticia:
 
     def __init__(self, id, dataPostagem, titulo, previa, conteudo, estado, imagem="https://via.placeholder.com/286x286"):
         self.__noticia_lista = None
@@ -35,9 +35,6 @@ class Noticias:
     def get_imagem(self):
         return self.__imagem
 
-    def get_noticia_lista(self):
-        return self.__noticia_lista
-
     @property
     def likes(self):
         return self.__likes
@@ -49,6 +46,3 @@ class Noticias:
     @views.setter
     def views(self, views):
         self.__views = views
-
-    def set_noticia_lista(self, noticia_lista):
-        self.__noticia_lista = noticia_lista
