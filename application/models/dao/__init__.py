@@ -1,5 +1,7 @@
 from application.models.entities.Noticia import Noticia
-from application.models.entities import Estado
+from application.models.entities.Estado import Estado
+from application.models.dao.EstadoDAO import EstadoDAO
+from application.models.dao.NoticiaDAO import NoticiaDAO
 
 dict_estados = {
     "acre":Estado(0, "Acre", "AC", "static/img/bandeiras/acre.png"),
@@ -8,7 +10,7 @@ dict_estados = {
     "amazonas":Estado(3, "Amazonas", "AM", "static/img/bandeiras/amazonas.png"),
     "bahia":Estado(4, "Bahia", "BA", "static/img/bandeiras/bahia.png"),
     "ceara":Estado(5, "Ceará", "CE", "static/img/bandeiras/ceara.png"),
-    "espirito":Estado(6, "Espírito Santo", "ES", "static/img/bandeiras/espiritosanto.png"),
+    "espiritosanto":Estado(6, "Espírito Santo", "ES", "static/img/bandeiras/espiritosanto.png"),
     "goias":Estado(7, "Goiás", "GO", "static/img/bandeiras/goias.png"),
     "maranhao":Estado(8, "Maranhão", "MA", "static/img/bandeiras/maranhao.png"),
     "matogrosso":Estado(9, "Mato Grosso", "MT", "static/img/bandeiras/matogrosso.png"),
@@ -240,4 +242,5 @@ lista_noticias = [
                                 dict_estados["distritofederal"],
                                 'https://vtb.r7.com/399594/2022/03/29/62438ef543527f1b81000670/cce0aac1015f42bf966b22b17892473d__ER7_DR_TERRASPUBLICAS2903_thumb_thumb.jpg'),
                         ]
-
+estadoDAO = EstadoDAO()
+noticiaDAO = NoticiaDAO()
