@@ -2,7 +2,7 @@ from datetime import datetime
 
 from application.models.entities.Noticia import Noticia
 from application.models.dao import lista_noticias
-from .EstadosDAO import *
+from .EstadoDAO import *
 
 class NoticiaDAO:
         def __init__(self):
