@@ -1,7 +1,5 @@
-from application.models.dao import dict_estados
-
 class EstadoDAO:
-    def __init__(self):
+    def __init__(self, dict_estados):
         self.dict_estados = dict_estados
     
     def get_lista_estados(self):

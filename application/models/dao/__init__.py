@@ -242,5 +242,5 @@ lista_noticias = [
                                 dict_estados["distritofederal"],
                                 'https://vtb.r7.com/399594/2022/03/29/62438ef543527f1b81000670/cce0aac1015f42bf966b22b17892473d__ER7_DR_TERRASPUBLICAS2903_thumb_thumb.jpg'),
                         ]
-estadoDAO = EstadoDAO()
-noticiaDAO = NoticiaDAO()
+estadoDAO = EstadoDAO(dict_estados)
+noticiaDAO = NoticiaDAO(lista_noticias)

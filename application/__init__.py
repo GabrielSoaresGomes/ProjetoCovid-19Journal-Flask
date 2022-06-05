@@ -10,3 +10,4 @@ from application.controllers import home_controller
 from application.controllers import estado_controller
 from application.controllers import home_controller
 from application.controllers import error_controller
+from application.controllers import noticia_controller

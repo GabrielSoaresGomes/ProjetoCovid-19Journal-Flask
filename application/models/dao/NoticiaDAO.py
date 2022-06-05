@@ -1,11 +1,8 @@
 from datetime import datetime
-
-from application.models.entities.Noticia import Noticia
-from application.models.dao import lista_noticias
 from .EstadoDAO import *
 
 class NoticiaDAO:
-        def __init__(self):
+        def __init__(self, lista_noticias):
                 self.lista_noticias = lista_noticias
                         
         def get_noticia_lista(self):
@@ -23,7 +20,7 @@ class NoticiaDAO:
         
         def get_mais_curtidas(self):
                 mais_curtidas = []
-                for noticia in self.get_noticia_lista:
+                for noticia in self.get_noticia_lista():
                         if len(mais_curtidas) <= 4:
                                 mais_curtidas.append(noticia)
                         elif noticia.likes > mais_curtidas[0].likes:
@@ -43,7 +40,7 @@ class NoticiaDAO:
         
         def get_mais_vistas(self):
                 mais_vistas = []
-                for noticia in self.get_noticia_lista:
+                for noticia in self.get_noticia_lista():
                         if len(mais_vistas) <= 4:
                                 mais_vistas.append(noticia)
                         elif noticia.views > mais_vistas[0].views:
@@ -63,7 +60,7 @@ class NoticiaDAO:
 
         def get_mais_recentes(self):
                 mais_recentes = []
-                for noticia in self.get_noticia_lista:
+                for noticia in self.get_noticia_lista():
                         data = datetime.strptime(noticia.get_dataPostagem(), "%d/%m/%Y")
                         if len(mais_recentes) <= 4:
                                 mais_recentes.append(noticia)
