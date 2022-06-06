@@ -1,0 +1,23 @@
+#form_comentario {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#form_comentario input, #form_comentario textarea {
+  margin-bottom: 16px;
+}
+
+.submit_comentario {
+  background-color: rgb(207, 198, 198);
+  padding: 4px 6px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.submit_comentario:hover {
+  cursor: pointer;
+  background-color: rgb(155, 122, 122);
+  
+}
