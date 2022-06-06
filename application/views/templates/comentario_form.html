@@ -1,4 +1,4 @@
-<form method="post" action="#" id="form_comentario">
+<form method="post" action="{{ url_for('detalhes', id = noticia.get_id()) }}" id="form_comentario">
   <label class="form-label" for="input_nome">Nome de usuário: </label>
   <input required class="form-control" type="text" name="nome_usuario" id="input_nome" />
   <label class="form-label" for="input_email">E-mail: </label>

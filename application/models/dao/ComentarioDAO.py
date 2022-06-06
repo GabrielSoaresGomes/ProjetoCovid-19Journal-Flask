@@ -11,6 +11,6 @@ class ComentarioDAO:
   def listar_comentarios_noticia(self, id_noticia):
     comentarios = []
     for comentario in self.listar_comentarios():
-      if comentario.id_noticia == id_noticia:
+      if int(comentario.id_noticia) == int(id_noticia):
         comentarios.append(comentario)
     return comentarios

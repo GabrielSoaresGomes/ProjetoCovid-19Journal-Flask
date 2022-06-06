@@ -19,5 +19,15 @@
         </div>
     </div>
 </div>
+<div class="comentario-container">
+    {% for comentario in comentarios %}
+        <div class="comentario-div">
+            <p>Usuário: {{comentario.nome_usuario}}</p>
+            <p>Email: {{comentario.email_usuario}}</p>
+            <p>Mensagem: {{comentario.mensagem}}</p>
+        </div>
+
+    {%endfor%}
+</div>
 {% include 'comentario_form.html' %}
 {% endblock content %}
