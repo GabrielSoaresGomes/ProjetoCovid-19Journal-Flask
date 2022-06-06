@@ -1,3 +1,4 @@
+from application.models.dao.ComentarioDAO import ComentarioDAO
 from application.models.entities.Noticia import Noticia
 from application.models.entities.Estado import Estado
 from application.models.dao.EstadoDAO import EstadoDAO
@@ -244,3 +245,4 @@ lista_noticias = [
                         ]
 estadoDAO = EstadoDAO(dict_estados)
 noticiaDAO = NoticiaDAO(lista_noticias)
+comentarioDAO = ComentarioDAO()
