@@ -12,6 +12,7 @@ class Noticia:
         self.__imagem = imagem
         self.__estado = estado
         self.__likes = randint(0,10000)
+        self.__deslikes = randint(0, 10000)
         self.__views = randint(0,1000000)
 
     def get_id(self):
@@ -38,7 +39,19 @@ class Noticia:
     @property
     def likes(self):
         return self.__likes
+
+    @likes.setter
+    def likes(self, numero_likes):
+        self.__deslikes = numero_likes
+
+    @property
+    def deslikes(self):
+        return self.__deslikes
     
+    @deslikes.setter
+    def deslikes(self, numero_deslikes):
+        self.__deslikes = numero_deslikes
+
     @property
     def views(self):
         return self.__views

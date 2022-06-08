@@ -22,4 +22,6 @@ def detalhes(id):
     if resultado_busca:
         print(comentarioDAO.listar_comentarios_noticia(id))
         return render_template("detalhes.html", noticia=resultado_busca, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+
+
     
