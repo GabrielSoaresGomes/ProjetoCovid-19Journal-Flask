@@ -24,4 +24,24 @@ def detalhes(id):
         return render_template("detalhes.html", noticia=resultado_busca, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
 
 
+@app.route("/like/<int:id>/", methods=["GET"])
+def curtir_noticia(id):
+    noticia = noticiaDAO.buscar_noticia(id)
+    if noticia.status == 2:
+        noticia.retirar_avaliacao()
+    else:
+        noticia.avaliar_like()
+        noticia.status = 2
+    return render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+
+@app.route("/deslike/<int:id>", methods=["GET"])
+def nao_curtir(id):
+    noticia = noticiaDAO.buscar_noticia(id)
+    if noticia.status == 0:
+        noticia.retirar_avaliacao()
+    else:
+        noticia.avaliar_deslike()
+        noticia.status = 0
+    return render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+    
     
