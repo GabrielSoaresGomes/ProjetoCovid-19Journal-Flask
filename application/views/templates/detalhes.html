@@ -11,8 +11,10 @@
     <div class="info-contaier">
         <p class="ps-5 text-start">{{ noticia.get_dataPostagem() }} -- {{ noticia.views }}<i class="bi bi-eye"></i></p>
         <div class="container">
-            <a href="{{url_for('curtir_noticia', id=noticia.get_id() )}}">LIKE</a>
-            <a href="{{url_for('nao_curtir', id=noticia.get_id() )}}">DISLIKE</a>
+            <a href="{{url_for('curtir_noticia', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-up{% if noticia.status == 2 %}-fill{% endif %}"></i></a>
+            {{ noticia.likes }}
+            <a href="{{url_for('nao_curtir', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-down{% if noticia.status == 0 %}-fill{% endif %}"></i></a>
+            {{noticia.deslikes}}
         </div>
     </div>
     <div>
@@ -26,7 +28,10 @@
     {% for comentario in comentarios %}
         <div class="comentario-div">
             <div class="comentario-user">
-                <p>{{comentario.nome_usuario}}</p>
+                <div class="comentario-nome-foto">
+                    <img src="{{url_for('static', filename='img/user.png')}}" width="20px" height="20px" />
+                    <p>{{comentario.nome_usuario}}</p>
+                </div>
                 <p>{{comentario.email_usuario}}</p>
             </div>
             <div class="comentario-mensagem">

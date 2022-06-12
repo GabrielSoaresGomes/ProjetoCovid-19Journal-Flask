@@ -1,13 +1,15 @@
 .comentario-container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 450px);
 
 }
 
 .comentario-div {
-  background-color: gray;
+  min-height: 220px;
+  background-color: rgb(184, 176, 176);
   margin: 10px;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .comentario-user {
@@ -16,9 +18,18 @@
   justify-content: space-between;
 }
 
+.comentario-nome-foto {
+  display: flex;
+}
+
+.comentario-nome-foto img {
+  margin-right: 8px;
+}
 
 .comentario-report {
-  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
 }
 .report-user {
   cursor: pointer;
@@ -26,4 +37,13 @@
 
 .report-user:hover {
   color: red;
+}
+
+.comentario-mensagem {
+  overflow-wrap: break-word;
+}
+
+.comentario-mensagem p {
+  overflow-wrap: break-word;
+  overflow-y:hidden ;
 }
