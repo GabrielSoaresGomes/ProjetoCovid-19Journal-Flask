@@ -70,19 +70,60 @@
             $('.like-btn i').addClass("bi bi-hand-thumbs-up-fill")
             $('.deslike-btn i').addClass("bi bi-hand-thumbs-down")
         }
-        console.log(status)
+    }
+
+    function atualizar_comentarios() {
+        nome_usuario = $('#input_nome').val()
+        email = $('#input_email').val()
+        comentario = $('#textarea_comentario').val()
+        $('#input_nome').val("")
+        $('#input_email').val("")
+        $('#textarea_comentario').val("")
+        novo_comentario = `<div class="comentario-div">
+            <div class="comentario-user">
+                <div class="comentario-nome-foto">
+                    <img src="{{url_for('static', filename='img/user.png')}}" width="20px" height="20px" />
+                    <p>${nome_usuario}</p>
+                </div>
+                <p>${email}</p>
+            </div>
+            <div class="comentario-mensagem">
+                <p>${comentario}</p>
+            </div>
+            <div class="comentario-report">
+                <i title="Reportar usuário ${nome_usuario}" class="bi bi-exclamation-triangle report-user"></i>
+            </div>
+        </div>`
+        $('.comentario-container').append(novo_comentario)
     }
 
     $('.avaliacao-btn').click(function(e) {
+        
         $.ajax({
             data : {
               id : $(this).attr('data-id'),
             },
-        type: 'GET',
-        url: $(this).attr('data-url'),
+            type: 'GET',
+            url: $(this).attr('data-url'),
         }).done(function(data) {
             verificar_avaliacao(data.status)
             atualizar_avaliacao(data.numero_likes, data.numero_deslikes)
+        })
+    })
+
+    $('#form_comentario').submit(function(e) {
+        e.preventDefault()
+        $.ajax({
+            data: {
+                nome_usuario: $('#input_nome').val() ,
+                email_usuario: $('#input_email').val() ,
+                comentario: $('#textarea_comentario').val() ,
+            },
+            type: "POST",
+            url: $(this).attr('data-url')
+        }).done(function(data) {
+            atualizar_comentarios()
+            
         })
     })
 
