@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, jsonify
 from application import app
 from application.models.dao import noticiaDAO
 from application.models.dao import estadoDAO
@@ -17,14 +17,12 @@ def detalhes(id):
         novo_comentario = Comentario(nome_usuario,email_usuario,comentario, id)
         
         comentarioDAO.adicionar_comentarios(novo_comentario)
-        print(comentarioDAO.listar_comentarios())
     resultado_busca = noticiaDAO.buscar_noticia(id) 
     if resultado_busca:
-        print(comentarioDAO.listar_comentarios_noticia(id))
         return render_template("detalhes.html", noticia=resultado_busca, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
 
 
-@app.route("/like/<int:id>/", methods=["GET"])
+@app.route("/like/<int:id>/", methods=["GET","POST"])
 def curtir_noticia(id):
     noticia = noticiaDAO.buscar_noticia(id)
     if noticia.status == 2:
@@ -32,9 +30,10 @@ def curtir_noticia(id):
     else:
         noticia.avaliar_like()
         noticia.status = 2
-    return render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+    return jsonify({'numero_likes': noticia.likes})
+    render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
 
-@app.route("/deslike/<int:id>", methods=["GET"])
+@app.route("/deslike/<int:id>", methods=["GET","POST"])
 def nao_curtir(id):
     noticia = noticiaDAO.buscar_noticia(id)
     if noticia.status == 0:

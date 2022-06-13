@@ -11,9 +11,9 @@
     <div class="info-contaier">
         <p class="ps-5 text-start">{{ noticia.get_dataPostagem() }} -- {{ noticia.views }}<i class="bi bi-eye"></i></p>
         <div class="container">
-            <a href="{{url_for('curtir_noticia', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-up{% if noticia.status == 2 %}-fill{% endif %}"></i></a>
+            <a data-id={{ noticia.get_id() }} data-url="{{url_for('curtir_noticia', id=noticia.get_id() )}}" class="like-btn" href="#/"><i class="bi bi-hand-thumbs-up{% if noticia.status == 2 %}-fill{% endif %}"></i></a>
             {{ noticia.likes }}
-            <a href="{{url_for('nao_curtir', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-down{% if noticia.status == 0 %}-fill{% endif %}"></i></a>
+            <a data-id="{{noticia.get_id}}" href="{{url_for('nao_curtir', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-down{% if noticia.status == 0 %}-fill{% endif %}"></i></a>
             {{noticia.deslikes}}
         </div>
     </div>
@@ -44,5 +44,24 @@
 
     {%endfor%}
 </div>
+
 {% include 'comentario_form.html' %}
 {% endblock content %}
+
+{% block extrajs %}
+<script>
+    $('.like-btn').click(function(e) {
+        $.ajax({
+            data : {
+              id : $(this).attr('data-id'),
+            },
+        type: 'GET',
+        url: $(this).attr('data-url'),
+        }).done(function(data) {
+            console.log($(e.target).parent())
+            console.log(data.numero_likes)
+        })
+    })
+
+</script>
+{% endblock %}
