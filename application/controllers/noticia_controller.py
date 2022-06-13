@@ -30,8 +30,7 @@ def curtir_noticia(id):
     else:
         noticia.avaliar_like()
         noticia.status = 2
-    return jsonify({'numero_likes': noticia.likes})
-    render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+    return jsonify({'status': noticia.status, "numero_likes": noticia.likes, "numero_deslikes": noticia.deslikes})
 
 @app.route("/deslike/<int:id>", methods=["GET","POST"])
 def nao_curtir(id):
@@ -41,6 +40,6 @@ def nao_curtir(id):
     else:
         noticia.avaliar_deslike()
         noticia.status = 0
-    return render_template('detalhes.html',noticia=noticia, estadosNav=estadoDAO.get_lista_estados(), detalhes=True, comentarios=comentarioDAO.listar_comentarios_noticia(id))
+    return jsonify({'status': noticia.status, "numero_likes": noticia.likes, "numero_deslikes": noticia.deslikes})
     
     

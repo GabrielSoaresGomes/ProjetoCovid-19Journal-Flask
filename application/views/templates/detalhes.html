@@ -10,11 +10,11 @@
     </div>
     <div class="info-contaier">
         <p class="ps-5 text-start">{{ noticia.get_dataPostagem() }} -- {{ noticia.views }}<i class="bi bi-eye"></i></p>
-        <div class="container">
-            <a data-id={{ noticia.get_id() }} data-url="{{url_for('curtir_noticia', id=noticia.get_id() )}}" class="like-btn" href="#/"><i class="bi bi-hand-thumbs-up{% if noticia.status == 2 %}-fill{% endif %}"></i></a>
-            {{ noticia.likes }}
-            <a data-id="{{noticia.get_id}}" href="{{url_for('nao_curtir', id=noticia.get_id() )}}"><i class="bi bi-hand-thumbs-down{% if noticia.status == 0 %}-fill{% endif %}"></i></a>
-            {{noticia.deslikes}}
+        <div class="container-avaliacao">
+            <a data-id= {{ noticia.get_id() }} data-url="{{url_for('curtir_noticia', id=noticia.get_id() )}}" class="avaliacao-btn like-btn" href="#/"><i class="bi bi-hand-thumbs-up{% if noticia.status == 2 %}-fill{% endif %}"></i></a>
+            <p class="numero-likes">{{ noticia.likes }}</p>
+            <a data-id= {{ noticia.get_id() }} data-url="{{url_for('nao_curtir', id=noticia.get_id() )}}" class="avaliacao-btn deslike-btn" href="#/"><i class="bi bi-hand-thumbs-down{% if noticia.status == 0 %}-fill{% endif %}"></i></a>
+            <p class="numero-deslikes">{{noticia.deslikes}}</p>
         </div>
     </div>
     <div>
@@ -50,7 +50,30 @@
 
 {% block extrajs %}
 <script>
-    $('.like-btn').click(function(e) {
+    function atualizar_avaliacao(numero_likes, numero_deslikes) {
+        $('p.numero-likes').text(numero_likes)
+        $('p.numero-deslikes').text(numero_deslikes)
+    }
+
+    function verificar_avaliacao(status) {
+        $('.like-btn i').attr('class', '')
+        $('.deslike-btn i').attr('class', '')
+        if (status==0 ) {
+            $('.like-btn i').addClass("bi bi-hand-thumbs-up")
+            $('.deslike-btn i').addClass("bi bi-hand-thumbs-down-fill")
+        }
+        else if (status==1) {
+            $('.like-btn i').addClass("bi bi-hand-thumbs-up")
+            $('.deslike-btn i').addClass("bi bi-hand-thumbs-down")
+        } else {
+            console.log("like")
+            $('.like-btn i').addClass("bi bi-hand-thumbs-up-fill")
+            $('.deslike-btn i').addClass("bi bi-hand-thumbs-down")
+        }
+        console.log(status)
+    }
+
+    $('.avaliacao-btn').click(function(e) {
         $.ajax({
             data : {
               id : $(this).attr('data-id'),
@@ -58,8 +81,8 @@
         type: 'GET',
         url: $(this).attr('data-url'),
         }).done(function(data) {
-            console.log($(e.target).parent())
-            console.log(data.numero_likes)
+            verificar_avaliacao(data.status)
+            atualizar_avaliacao(data.numero_likes, data.numero_deslikes)
         })
     })
 
